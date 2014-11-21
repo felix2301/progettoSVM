@@ -8,7 +8,7 @@ Emotional range. I feel that electronic music has a far broader emotional range 
 E' proprio da qui che vorrei cominciare. Non potevo trovare una descrizone migliore per farti capire che la musica elettronica cerca di trasmettere delle emozioni senza parlarti. Come primo brano ho scelto una canzone che meglio di tutte riesce a toccare le emozioni:
 
 
-1.Paul Kalkbrenner - Azure
+1.Paul Kalkbrenner - Azure	
 	Ho casualmente trovato un video per questa canzone e penso che sia perfetto per esprimere le emozioni che la 			canzone vuole trasmettere.
 	https://www.youtube.com/watch?v=v6qP7iKUaSs
 	
