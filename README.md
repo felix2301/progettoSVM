@@ -20,3 +20,62 @@ E' proprio da qui che vorrei cominciare. Non potevo trovare una descrizone migli
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <math.h> /* es -lm // chmod +x */ 
+
+
+/* Esercizio 1:
+
+Realizzare una funzione che, presi in input i tre coefficienti di un'equazione di secondo grado del tipo ax2 + bx + c = 0 letti tramite scanf, restituisca le soluzioni reali di tale equazione. Il programma dovrà controllare che tali soluzioni esistano, e distinguere i casi di due zeri reali coincidenti e due zeri reali distinti, stampando l'output opportunamente a seconda del caso. */
+int main () {
+	int scelta;
+	printf("Choose the part to execute:\n\t1 \t: Part 1 (equation zeros)\n\t2 \t: Part 2 (Fibonacci sequence)\n\t3 \t: Part 3 (42)\n\tother \t: Exit\n\n");
+	scanf("%d",&scelta);
+	if (scelta == 1) {
+		float a,b,c;
+		float x, y;
+			printf("Insert the coefficient a b c separated by spaces\n");
+			scanf("%f",&a);
+			scanf("%f",&b);
+			scanf("%f",&c);
+			if ( (b*b - 4*a*c) > 0) {
+				x = ( (-1*b) + (sqrt(b*b - 4*a*c)) ) / 2*a;
+				y = ( (-1*b) - (sqrt(b*b - 4*a*c)) ) / 2*a;
+				printf("The equation (%f x^2 + %f x + %f = 0) has ",a,b,c);
+				printf("two zeros: %f, %f\n",x,y); }
+			else { if ( (b*b - 4*a*c) == 0) {
+					x = ( (-1*b) / 2*a);
+					printf("The equation degree is less than two\n");
+					printf("The equation (%f x^2 + %f x + %f = 0) has ",a,b,c);
+					printf("only one zero: %f\n",x); }
+					else { 
+						printf("The equation degree is less than two\n");
+						printf("The equation (%f x^2 + %f x + %f = 0) has ",a,b,c);
+						printf("no real zeros.\n"); } }
+	}
+	else { if (scelta == 2) {
+			int inp, b;
+			printf("Insert the index of Fibonacci element\n");
+			scanf("%d",&inp);
+			if (inp == 2 || inp == 1) { b = 1 }
+			else {
+				
+	return 0; }
+
+
+
+
+
+
