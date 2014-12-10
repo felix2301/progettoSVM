@@ -33,19 +33,19 @@ E' proprio da qui che vorrei cominciare. Non potevo trovare una descrizone migli
 
 
 #include <stdio.h>
-#include <math.h> /* es -lm // chmod +x */ 
+#include <math.h>
 
-
-/* Esercizio 1:
-
-Realizzare una funzione che, presi in input i tre coefficienti di un'equazione di secondo grado del tipo ax2 + bx + c = 0 letti tramite scanf, restituisca le soluzioni reali di tale equazione. Il programma dovrà controllare che tali soluzioni esistano, e distinguere i casi di due zeri reali coincidenti e due zeri reali distinti, stampando l'output opportunamente a seconda del caso. */
 int main () {
 	int scelta;
-	printf("Choose the part to execute:\n\t1 \t: Part 1 (equation zeros)\n\t2 \t: Part 2 (Fibonacci sequence)\n\t3 \t: Part 3 (42)\n\tother \t: Exit\n\n");
-	scanf("%d",&scelta);
+	float a,b,c;
+	float x, y;
+	int inp, i;
+	do{
+		
+		printf("Choose the part to execute:\n\t1 \t: Part 1 (equation zeros)\n\t2 \t: Part 2 (Fibonacci sequence)\n\t3 \t: Part 3 (42)\n\tother \t: Exit\n\n");
+		scanf("%d",&scelta);
 	if (scelta == 1) {
-		float a,b,c;
-		float x, y;
+
 			printf("Insert the coefficient a b c separated by spaces\n");
 			scanf("%f",&a);
 			scanf("%f",&b);
@@ -66,16 +66,31 @@ int main () {
 						printf("no real zeros.\n"); } }
 	}
 	else { if (scelta == 2) {
-			int inp, b;
+			float fib1=1.0, fib2=1.0, app=0.0;
 			printf("Insert the index of Fibonacci element\n");
 			scanf("%d",&inp);
-			if (inp == 2 || inp == 1) { b = 1 }
-			else {
+			if (inp == 2 || inp == 1) { fib1 = 1; 
+				printf("Fibonacci(%d) = %f\n", inp, fib1);}
+			else { for(i=3; i<=inp; i++){
+					app=fib1;
+					fib1=fib1+fib2;
+					fib2=app;
+				}
+				printf("Fibonacci(%d) = %f\n", inp, fib1);
+			}
+		}else {
+		if(scelta == 3){
+			int val1=0, val2=0, somma=0;
+			printf("Enter an integer number\n");
+			scanf("%d", &val1);
+			while (somma != 42) {
+				val2=val1;
+				printf("Enter another integer number\n");
+				scanf("%d", &val1);
+				somma = val1 + val2;
+				printf("Sum is %d\n", somma);}}
+			
+		}}
+		}while(scelta >= 1 && scelta <=3);
 				
-	return 0; }
-
-
-
-
-
-
+	return 0;}
